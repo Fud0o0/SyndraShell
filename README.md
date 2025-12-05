@@ -55,17 +55,12 @@ curl -fsSL https://raw.githubusercontent.com/Fud0o0/SyndraShell/main/install.sh 
 
 #### Python Dependencies
 
-Install via `pip install --user -r requirements.txt`:
-
-- **PyGObject** (`>=3.42.0`) - Python bindings for GTK3
-- **Pillow** (`>=9.5.0`) - Image processing (wallpaper thumbnails)
-- **pywayland** (`>=0.4.14`) - Python bindings for Wayland protocols
-- **setproctitle** (`>=1.3.2`) - Process title management
-- **watchdog** (`>=2.3.1`) - File system monitoring (wallpaper directory)
-- **loguru** (`>=0.6.0`) - Logging framework
-
-**Currently Not Used (Reserved for Future Features):**
-- ijson, numpy, psutil, requests, toml
+- [PyGObject](https://pypi.org/project/PyGObject/)
+- [Pillow](https://pypi.org/project/Pillow/)
+- [pywayland](https://pypi.org/project/pywayland/)
+- [setproctitle](https://pypi.org/project/setproctitle/)
+- [watchdog](https://pypi.org/project/watchdog/)
+- [loguru](https://pypi.org/project/loguru/)
 
 #### Fonts (Auto-downloaded on first run)
 

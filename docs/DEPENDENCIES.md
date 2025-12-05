@@ -57,26 +57,16 @@ Complete list of SyndraShell dependencies with usage information.
 
 ## Python Dependencies
 
-### Actively Used (REQUIRED)
+### Python Dependencies
 
-| Package | Version | Purpose | Used In |
-|---------|---------|---------|---------|
-| `PyGObject` | >=3.42.0 | Python bindings for GTK3/GLib | All modules, widgets, services |
-| `Pillow` | >=9.5.0 | Image processing library | `modules/wallpapers.py` (thumbnail generation) |
-| `pywayland` | >=0.4.14 | Wayland protocol bindings | `scripts/inhibit.py` (idle inhibition) |
-| `setproctitle` | >=1.3.2 | Process title management | `main.py`, `scripts/inhibit.py` |
-| `watchdog` | >=2.3.1 | File system monitoring | `modules/wallpapers.py` (directory monitoring) |
-| `loguru` | >=0.6.0 | Advanced logging framework | Future logging implementation |
-
-### Reserved for Future Features
-
-| Package | Version | Purpose | Status |
-|---------|---------|---------|--------|
-| `ijson` | >=3.1.4 | Streaming JSON parsing | Reserved for large config files |
-| `numpy` | >=1.24.0 | Numerical operations | Reserved for data visualization |
-| `psutil` | >=5.9.0 | System monitoring | Reserved for system widgets |
-| `requests` | >=2.28.0 | HTTP requests | Reserved for network features |
-| `toml` | >=0.10.2 | TOML configuration | Reserved for alternative config format |
+| Package | Used In |
+|---------|---------|
+| [PyGObject](https://pypi.org/project/PyGObject/) | All modules, widgets, services |
+| [Pillow](https://pypi.org/project/Pillow/) | `modules/wallpapers.py` |
+| [pywayland](https://pypi.org/project/pywayland/) | `scripts/inhibit.py` |
+| [setproctitle](https://pypi.org/project/setproctitle/) | `main.py`, `scripts/inhibit.py` |
+| [watchdog](https://pypi.org/project/watchdog/) | `modules/wallpapers.py` |
+| [loguru](https://pypi.org/project/loguru/) | Future logging |
 
 ---
 
@@ -100,22 +90,17 @@ curl -fsSL https://raw.githubusercontent.com/Fud0o0/SyndraShell/main/install.sh 
 
 ### Manual Installation
 
-#### Core + Required Tools
 ```bash
-# Using yay or paru
+# Core + Required
 yay -S python-fabric-git fabric-cli-git matugen-bin hyprland hypridle hyprlock \
        brightnessctl networkmanager python-gobject python-pywayland wl-clipboard \
        kitty wofi hyprshot hyprpicker imagemagick
-```
 
-#### Optional Tools
-```bash
+# Optional
 yay -S waybar dunst network-manager-applet playerctl cliphist \
        gpu-screen-recorder tesseract swappy
-```
 
-#### Python Dependencies
-```bash
+# Python
 pip install --user -r requirements.txt
 ```
 
