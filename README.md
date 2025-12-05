@@ -11,7 +11,7 @@
 
 **Run the following command in your terminal once logged into Hyprland:**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/SyndraShell/syndrashell/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Fud0o0/SyndraShell/main/install.sh | bash
 ```
 
 ### NixOS
@@ -43,8 +43,8 @@ curl -fsSL https://raw.githubusercontent.com/SyndraShell/syndrashell/main/instal
 
 2. Download and run Ax-Shell:
     ```bash
-    git clone git clone (https://github.com/<username>/<project>.git)
-    cd <project>
+    git clone https://github.com/Fud0o0/SyndraShell.git ~/.config/SyndraShell
+    uwsm -- app python ~/.config/SyndraShell/main.py > /dev/null 2>&1 & disown
     ```
 
 
