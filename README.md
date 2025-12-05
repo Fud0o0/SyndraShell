@@ -32,6 +32,8 @@ curl -fsSL https://raw.githubusercontent.com/Fud0o0/SyndraShell/main/install.sh 
 - [hyprlock](https://github.com/hyprwm/hyprlock)
 - [hyprshot](https://github.com/Gustash/Hyprshot)
 - [hyprpicker](https://github.com/hyprwm/hyprpicker)
+- [swww](https://github.com/LGFae/swww)
+- [swaybg](https://github.com/swaywm/swaybg)
 
 **Screenshot & Recording:**
 - [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder/about/)

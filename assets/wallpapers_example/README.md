@@ -1,21 +1,12 @@
 # Example Wallpapers
 
-Place your example wallpapers in this directory.
+The file `example-1.jpg` is automatically used as the default wallpaper when SyndraShell is first installed.
 
-These wallpapers will be used as defaults when no wallpaper is set.
+## Download Wallpapers
 
-## Recommended Formats
-- PNG
-- JPG/JPEG
-- WebP
-
-## Naming Convention
-Use lowercase with hyphens:
-- `example-1.jpg`
-- `example-2.png`
-- `landscape-mountains.jpg`
-
-## Download Free Wallpapers
+You can add more wallpapers here or download them from:
 - [Unsplash](https://unsplash.com)
 - [Pexels](https://www.pexels.com)
 - [Wallhaven](https://wallhaven.cc)
+
+All wallpapers in this directory will be automatically copied to `~/Pictures/Wallpapers/` on first installation.
