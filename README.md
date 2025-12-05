@@ -2,7 +2,10 @@
 
 > [!NOTE]
 > You need a functioning Hyprland installation.
-> This will also enable NetworkManager if it is not already enabled.
+> Built with Fabric framework - inspired by Ax-Shell.
+
+> [!TIP]
+> 📖 For a complete dependency reference with links and usage details, see [DEPENDENCIES.md](docs/DEPENDENCIES.md)
 
 ### Arch Linux
 
@@ -14,38 +17,118 @@
 curl -fsSL https://raw.githubusercontent.com/Fud0o0/SyndraShell/main/install.sh | bash
 ```
 
-### NixOS
-👉 [Try it out!](https://github.com/Fud0o0/SyndraShell) 👈
-
 ### Manual Installation
-1. Install dependencies:
-- [Fabric](https://github.com/Fabric-Development/fabric)
-- [fabric-cli](https://github.com/Fabric-Development/fabric-cli)
-- [Gray](https://github.com/Fabric-Development/gray)
-- [Matugen](https://github.com/InioX/matugen)
 
-   - Python dependencies:
-        - PyGObject
-        - ijson
-        - numpy
-        - pillow
-        - psutil
-        - pywayland
-        - requests
-        - setproctitle
-        - toml
-        - watchdog
-    - Fonts (automated on first run):
-        - Zed Sans
-        - Tabler Icons
+#### System Dependencies
 
-        
+**Core Framework:**
+- [Fabric](https://github.com/Fabric-Development/fabric) - Python GTK3 framework for Wayland
+- [fabric-cli](https://github.com/Fabric-Development/fabric-cli) - CLI tools for Fabric
+- [Matugen](https://github.com/InioX/matugen) - Material Design color generation
 
-2. Download and run Ax-Shell:
+**Hyprland & Wayland:**
+- [Hyprland](https://github.com/hyprwm/Hyprland) - Dynamic tiling Wayland compositor
+- [hypridle](https://github.com/hyprwm/hypridle) - Idle daemon for Hyprland
+- [hyprlock](https://github.com/hyprwm/hyprlock) - Screen locker for Hyprland
+- [hyprshot](https://github.com/Gustash/Hyprshot) - Screenshot utility for Hyprland
+- [hyprpicker](https://github.com/hyprwm/hyprpicker) - Color picker for Hyprland
+
+**Screenshot & Recording:**
+- [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder/about/) - GPU-accelerated screen recording
+- [tesseract](https://github.com/tesseract-ocr/tesseract) - OCR engine for text extraction
+- [ImageMagick](https://imagemagick.org/) - Image manipulation (mockup effects)
+- [swappy](https://github.com/jtheoof/swappy) - Wayland screenshot editor
+
+**System Utilities:**
+- `brightnessctl` - Brightness control
+- `networkmanager` - Network management
+- `network-manager-applet` - NetworkManager applet
+- `playerctl` - Media player control
+- `wl-clipboard` - Wayland clipboard utilities
+- `cliphist` - Clipboard history manager
+
+**Terminals & UI:**
+- [kitty](https://sw.kovidgoyal.net/kitty/) - GPU-accelerated terminal emulator
+- [wofi](https://hg.sr.ht/~scoopta/wofi) - Wayland application launcher
+- [waybar](https://github.com/Alexays/Waybar) - Status bar (optional, not used by default)
+- [dunst](https://dunst-project.org/) - Notification daemon (optional, not used by default)
+
+#### Python Dependencies
+
+Install via `pip install --user -r requirements.txt`:
+
+- **PyGObject** (`>=3.42.0`) - Python bindings for GTK3
+- **Pillow** (`>=9.5.0`) - Image processing (wallpaper thumbnails)
+- **pywayland** (`>=0.4.14`) - Python bindings for Wayland protocols
+- **setproctitle** (`>=1.3.2`) - Process title management
+- **watchdog** (`>=2.3.1`) - File system monitoring (wallpaper directory)
+- **loguru** (`>=0.6.0`) - Logging framework
+
+**Currently Not Used (Reserved for Future Features):**
+- ijson, numpy, psutil, requests, toml
+
+#### Fonts (Auto-downloaded on first run)
+
+- [Zed Sans](https://github.com/zed-industries/zed-fonts) - UI font
+- [JetBrainsMono Nerd Font](https://www.nerdfonts.com/) - Monospace font with icons
+- [Tabler Icons](https://tabler-icons.io/) - Icon font
+
+2. Download and run SyndraShell:
     ```bash
     git clone https://github.com/Fud0o0/SyndraShell.git ~/.config/SyndraShell
-    uwsm -- app python ~/.config/SyndraShell/main.py > /dev/null 2>&1 & disown
+    cd ~/.config/SyndraShell
+    pip install --user -r requirements.txt
+    uwsm app -- python ~/.config/SyndraShell/main.py > /dev/null 2>&1 & disown
     ```
+
+## Features
+
+- 🎨 **Modern UI** - Built with Fabric framework
+- 🌈 **Dynamic Theming** - Powered by Matugen
+- ⚡ **Fast & Lightweight** - Optimized for performance
+- 🎯 **Wayland Native** - Full Hyprland integration
+- 🔒 **Secure** - Git-crypt protected sensitive files
+- 🖼️ **Wallpaper Selector** - Thumbnail preview with thumbnail caching
+- 📸 **Screenshot Tools** - Region, window, fullscreen, and mockup modes
+- 🎬 **Screen Recording** - Built-in screen recorder
+- 📝 **OCR** - Extract text from screenshots
+- 🎨 **Color Picker** - Pick colors from screen
+- ⚡ **Game Mode** - Disable effects for better performance
+
+## Components
+
+- **Bar** - Top status bar with workspace indicators and system info
+- **Dock** - Application launcher at the bottom
+- **Notch** - Dynamic dropdown menu for quick access
+- **Dashboard** - Centralized control panel with:
+  - **Wallpaper Selector** - Browse and set wallpapers with preview
+  - **Toolbox** - Screenshot, recording, OCR, and utilities
+  - **Widgets** - System information and controls
+
+## Keybinds
+
+### General
+- `SUPER + D` - Open Dashboard
+- `SUPER + R` - App Launcher
+- `SUPER + ALT + B` - Reload SyndraShell
+
+### Screenshots (recommended bindings)
+- `SUPER + SHIFT + S` - Screenshot region
+- `SUPER + SHIFT + W` - Screenshot window
+- `SUPER + SHIFT + P` - Screenshot screen
+- `SUPER + SHIFT + M` - Screenshot region (mockup mode)
+
+### Tools
+- `SUPER + ALT + R` - Toggle screen recording
+- `SUPER + ALT + O` - OCR (extract text from screen)
+- `SUPER + ALT + C` - Color picker
+- `SUPER + ALT + G` - Toggle game mode
+
+## Credits
+
+Inspired by [Ax-Shell](https://github.com/Axenide/Ax-Shell) by Axenide.
+Built with [Fabric](https://github.com/Fabric-Development/fabric).
+
 
 
 <h2><sub><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="25" height="25" /></sub> Roadmap</h2>
