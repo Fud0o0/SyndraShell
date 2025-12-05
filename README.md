@@ -88,7 +88,11 @@ curl -fsSL https://raw.githubusercontent.com/Fud0o0/SyndraShell/main/install.sh 
 ### General
 - `SUPER + D` - Open Dashboard
 - `SUPER + R` - App Launcher
+- `SUPER + L` - Lock session
 - `SUPER + ALT + B` - Reload SyndraShell
+
+### Window Management
+- `SUPER + Q` or `ALT + F4` - Close window
 
 ### Screenshots (recommended bindings)
 - `SUPER + SHIFT + S` - Screenshot region
