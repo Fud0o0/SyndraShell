@@ -24,8 +24,10 @@ curl -fsSL (mettre le installe.sh) | bash
 
 ### Manual Installation
 1. Install dependencies:
-
-
+- [Fabric](https://github.com/Fabric-Development/fabric)
+- [fabric-cli](https://github.com/Fabric-Development/fabric-cli)
+- [Gray](https://github.com/Fabric-Development/gray)
+- [Matugen](https://github.com/InioX/matugen)
 
 
 
@@ -74,6 +76,7 @@ curl -fsSL (mettre le installe.sh) | bash
     </td>
   </tr>
 </table>
+
 
 
 
