@@ -48,7 +48,7 @@ curl -fsSL (mettre le installe.sh) | bash
 
 1. Download and run SyndraShell :
    ```bash
-git clone https://github.com/<username>/<project>.git
+git clone (https://github.com/<username>/<project>.git)
 cd <project>
 
 
@@ -73,6 +73,7 @@ cd <project>
     </td>
   </tr>
 </table>
+
 
 
 
