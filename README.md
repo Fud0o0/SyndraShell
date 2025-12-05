@@ -29,22 +29,20 @@ curl -fsSL (mettre le installe.sh) | bash
 - [Gray](https://github.com/Fabric-Development/gray)
 - [Matugen](https://github.com/InioX/matugen)
 
-
-
-
-
-
-
-
-    - Python dependencies:
-
-
-
-
-
-
+   - Python dependencies:
+        - PyGObject
+        - ijson
+        - numpy
+        - pillow
+        - psutil
+        - pywayland
+        - requests
+        - setproctitle
+        - toml
+        - watchdog
     - Fonts (automated on first run):
-
+        - Zed Sans
+        - Tabler Icons
 
         
 
@@ -76,6 +74,7 @@ curl -fsSL (mettre le installe.sh) | bash
     </td>
   </tr>
 </table>
+
 
 
 
